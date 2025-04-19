@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;  
+    background-color: #f4f4f4;  
+    margin: 0;
+    padding: 0;
+    color: #333;  
+}
+
+header {
+    text-align: center;
+    background-color: #2c3e50; 
+    color: white;
+    padding: 20px 0;
+}
+
+#name {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.contact {
+    font-weight: bold;
+}
+
+section {
+    background-color: white;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+    color: #2c3e50; 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+/* Sibling Selector */
+h2 + ul li {
+    font-style: italic; 
+}
+
+/*nth-child Selector */
+.project:nth-child(even) {
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* seudo-class Selectors */
+li:hover {
+    color: #2980b9; 
+    cursor: pointer;
+}
+
+/*  First Letter Selector */
+p::first-letter {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* th-of-type Selector */
+h2:nth-of-type(odd) {
+    color: #2980b9; 
+}
+
+.hobby {
+    display: inline-block;
+    background-color: #2c3e50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* Last-child Selector  */
+.hobby:last-child {
+    background-color: #e74c3c; 
+}

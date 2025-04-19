@@ -1,0 +1,42 @@
+/* Pseudo-Classes */
+
+a:hover {
+  color: red;
+}
+
+input:focus {
+  outline: 3px solid rgb(64, 78, 179);
+}
+
+p:first-child {
+  color: rgb(20, 217, 36);
+  font-size: larger;
+}
+
+p:last-child {
+  color: green;
+}
+
+h1::before {
+    content: " *"
+}
+
+h1::after {
+    content: " +"
+}
+
+div p::first-line {
+    color: red;
+}
+
+p::first-letter {
+    color: rgb(196, 12, 86);
+    font-size: 30px;
+}
+
+input::placeholder {
+    font-size: 20x;
+    font-family: sans-serif;
+    font-weight: 900;
+    color: blueviolet;
+}

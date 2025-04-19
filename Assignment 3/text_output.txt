@@ -1,0 +1,4 @@
+﻿Employee Records:
+
+101 - Suhani - Software Engineer - 50000
+102 - Aryan - Data Analyst - 45000

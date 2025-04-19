@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="stud.css"?>
+<students>
+    <student batch="T1">
+        <rollNo>23</rollNo>
+        <name>Shravani</name>
+        <department>CSE</department>
+        <class>TY-C</class>
+    </student>
+
+    <student batch="T2">
+        <rollNo>24</rollNo>
+        <name>Anushka</name>
+        <department>CSE</department>
+        <class>TY-C</class>
+    </student>
+
+    <student batch="T2">
+        <rollNo>25</rollNo>
+        <name>Nandini</name>
+        <department>CSE</department>
+        <class>TY-C</class>
+    </student>
+
+    <student batch="T1">
+        <rollNo>26</rollNo>
+        <name>Suhani</name>
+        <department>CSE</department>
+        <class>TY-C</class>
+    </student>
+</students>

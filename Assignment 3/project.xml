@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="pro.css"?>
+<project>
+    <title>Pet adoption system </title>
+    <members>
+        <member roll="lead">
+            <name>Suhani</name>
+            <rollno>26</rollno>
+            <expertise>Full Stack Development</expertise>
+            <role>Project Lead</role>
+        </member>
+        <member roll="member">
+            <name>Sanjana</name>
+            <rollno>53</rollno>
+            <expertise>UI/UX Design</expertise>
+            <role>Frontend Designer</role>
+        </member>
+        <member roll="member">
+            <name>Vendanti</name>
+            <rollno>61</rollno>
+            <expertise>Backend Development</expertise>
+            <role>API Engineer</role>
+        </member>
+    </members>
+</project>

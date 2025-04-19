@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="student.xsl"?>
+<students>
+    <student>
+        <name>Suhani Shaikh</name>
+        <age>20</age>
+        <grade>A</grade>
+    </student>
+    <student>
+        <name>Pooja Patil</name>
+        <age>22</age>
+        <grade>B</grade>
+    </student>
+    <student>
+        <name>Aliya mane</name>
+        <age>19</age>
+        <grade>C</grade>
+    </student>
+    <student>
+        <name>Babar patel</name>
+        <age>21</age>
+        <grade>A</grade>
+    </student>
+</students>

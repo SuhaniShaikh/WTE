@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="text.xsl"?>
+<employees>
+    <employee>
+        <id>101</id>
+        <name>Suhani</name>
+        <position>Software Engineer</position>
+        <salary>50000</salary>
+    </employee>
+    <employee>
+        <id>102</id>
+        <name>Aryan</name>
+        <position>Data Analyst</position>
+        <salary>45000</salary>
+    </employee>
+</employees>

@@ -1,0 +1,44 @@
+students {
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+student {
+    display: block;
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+name, department, class {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+}
+
+name {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 18px;
+}
+
+department {
+    color: #007BFF;
+    font-style: italic;
+}
+
+class {
+    color: #FF5733;
+}
+
+rollNo {
+    display:none;
+    font-size: 16px;
+    padding: 5px;
+}
+

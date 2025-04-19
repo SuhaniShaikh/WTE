@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="library">
+        <xs:element name="book">
+            <xs:element name="bookId" type="xs:integer"/>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="author" type="xs:string"/>
+            <xs:element name="availableCopies" type="xs:integer"/>
+            <xs:attribute name="category" type="xs:string" use="required"/>
+        </xs:element>
+    </xs:element>
+
+</xs:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="library2.xsd">
+    <book category="Classic Literature">
+        <bookId>101</bookId>
+        <title>Pride and Prejudice</title>
+        <author>Jane Austen</author>
+        <availableCopies>5</availableCopies>
+    </book>
+
+    <book category="Science Fiction">
+        <bookId>102</bookId>
+        <title>Foundation</title>
+        <author>Isaac Asimov</author>
+        <availableCopies>3</availableCopies>
+    </book>
+</library>

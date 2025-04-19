@@ -1,0 +1,40 @@
+/* universal selector */
+
+* {
+  background-color: antiquewhite;
+}
+
+/* Element Selector */
+p {
+  font-size: 25px;
+}
+/* Class Selector  */
+.button {
+  background-color: blue;
+  color: white;
+}
+
+/* ID Selector */
+#header {
+  background-color: gray;
+}
+
+/* Descendant Selectors */
+div p {
+  color: red;
+}
+
+/* Child Selector (>):  */
+div > p {
+  margin-left: 20px;
+}
+
+/* Adjacent Sibling Selector  */
+h1 + p {
+  color: rgb(80, 124, 105);
+}
+
+/* General Sibling Selector */
+h1 ~ p {
+  font-style: italic;
+}
