@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .controls {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 300px;
+        }
+        .query-examples {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Data Viewer</h1>
+    
+    <div class="controls">
+        <h2>XPath Query</h2>
+        <input type="text" id="xpathInput" placeholder="Enter XPath expression">
+        <button onclick="queryEmployees()">Search</button>
+        <button onclick="resetQuery()">Show All</button>
+        
+        <div class="query-examples">
+            <p>For eg:</p>
+            <ul>
+                <li><code>//employee[department='IT']</code> - IT Department</li>
+                <li><code>//employee[salary > 60000]</code> - Salary > $60k</li>
+                <li><code>//employee[contains(name, 'John')]</code> - Names with "John"</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Results</h2>
+    <div id="resultCount"></div>
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Hire Date</th>
+            </tr>
+        </thead>
+        <tbody id="employeeData">
+            <!-- Employee data will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        let xmlDoc;
+        
+        // Load XML file
+        function loadXML() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    const parser = new DOMParser();
+                    xmlDoc = parser.parseFromString(this.responseText, "text/xml");
+                    displayAllEmployees();
+                }
+            };
+            xhttp.open("GET", "employees.xml", true);
+            xhttp.send();
+        }
+        
+        // Display all employees
+        function displayAllEmployees() {
+            queryEmployees("//employee");
+        }
+        
+        // Query employees using XPath
+        function queryEmployees(expression) {
+            const xpathExpr = expression || document.getElementById("xpathInput").value || "//employee";
+            const tbody = document.getElementById("employeeData");
+            tbody.innerHTML = "";
+            
+            try {
+                const result = document.evaluate(
+                    xpathExpr,
+                    xmlDoc,
+                    null,
+                    XPathResult.ANY_TYPE,
+                    null
+                );
+                
+                let node = result.iterateNext();
+                let count = 0;
+                
+                while (node) {
+                    count++;
+                    const id = node.getAttribute('id') || '';
+                    const name = node.querySelector('name')?.textContent || '';
+                    const position = node.querySelector('position')?.textContent || '';
+                    const department = node.querySelector('department')?.textContent || '';
+                    const salary = node.querySelector('salary')?.textContent || '';
+                    const hireDate = node.querySelector('hire_date')?.textContent || '';
+                    
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${id}</td>
+                        <td>${name}</td>
+                        <td>${position}</td>
+                        <td>${department}</td>
+                        <td>$${parseInt(salary).toLocaleString()}</td>
+                        <td>${hireDate}</td>
+                    `;
+                    tbody.appendChild(row);
+                    
+                    node = result.iterateNext();
+                }
+                
+                document.getElementById("resultCount").innerHTML = `Found ${count} employee(s)`;
+                
+            } catch (e) {
+                document.getElementById("resultCount").innerHTML = `Error: ${e.message}`;
+                console.error(e);
+            }
+        }
+        
+        // Reset query to show all employees
+        function resetQuery() {
+            document.getElementById("xpathInput").value = "";
+            displayAllEmployees();
+        }
+        
+        // Initialize when page loads
+        window.onload = loadXML;
+    </script>
+</body>
+</html>

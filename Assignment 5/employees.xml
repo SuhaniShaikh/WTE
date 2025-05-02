@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee id="101">
+        <name>Suhani Shaikh</name>
+        <position>Software Engineer</position>
+        <department>IT</department>
+        <salary>75000</salary>
+        <hire_date>2020-05-15</hire_date>
+    </employee>
+    <employee id="102">
+        <name>Shravani Lohar</name>
+        <position>HR Manager</position>
+        <department>HR</department>
+        <salary>65000</salary>
+        <hire_date>2019-11-20</hire_date>
+    </employee>
+    <employee id="103">
+        <name>Nandini babar</name>
+        <position>Sales Executive</position>
+        <department>Sales</department>
+        <salary>58000</salary>
+        <hire_date>2021-02-10</hire_date>
+    </employee>
+    <employee id="104">
+        <name>Anushka patil</name>
+        <position>Senior Developer</position>
+        <department>IT</department>
+        <salary>82000</salary>
+        <hire_date>2018-07-22</hire_date>
+    </employee>
+    <employee id="105">
+        <name>Shravani Kumbhar</name>
+        <position>Marketing Specialist</position>
+        <department>Marketing</department>
+        <salary>62000</salary>
+        <hire_date>2022-01-05</hire_date>
+    </employee>
+</employees>
